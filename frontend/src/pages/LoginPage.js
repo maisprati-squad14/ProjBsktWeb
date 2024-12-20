@@ -4,11 +4,11 @@ import { autenticarUsuario } from '../services/api';
 function LoginPage() {
   const [loginUsuario, setLoginUsuario] = useState('');
   const [senhaUsuario, setSenhaUsuario] = useState('');
-  const [tokenAcess, setTokenAcess] = useState('');
+  const [tokenAccess, setTokenAccess] = useState('');
   const [resultado, setResultado] = useState(null);
 
   const handleLogin = async () => {
-    const data = await autenticarUsuario(loginUsuario, senhaUsuario, tokenAcess);
+    const data = await autenticarUsuario(loginUsuario, senhaUsuario, tokenAccess);
     setResultado(data);
   };
 
@@ -30,8 +30,8 @@ function LoginPage() {
       <input
         type="text"
         placeholder="Token Access"
-        value={tokenAcess}
-        onChange={e => setTokenAcess(e.target.value)}
+        value={tokenAccess}
+        onChange={e => setTokenAccess(e.target.value)}
       />
       <button onClick={handleLogin}>Autenticar</button>
 
