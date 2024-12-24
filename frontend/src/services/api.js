@@ -15,6 +15,6 @@ const API_URL = 'http://localhost:8080/api';
 
 
 // enquanto o backend nao esta pronto, utilizei o exemplo abaixo
-export const autenticarUsuario = async (loginUsuario, senhaUsuario, tokenAcess) => {
+export const autenticarUsuario = async (loginUsuario, senhaUsuario, tokenAccess) => {
   return { dadosusuario: "teste", idloja: 1, gestor: true };
 };

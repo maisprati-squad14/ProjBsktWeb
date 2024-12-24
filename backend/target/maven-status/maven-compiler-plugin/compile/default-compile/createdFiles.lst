@@ -1,0 +1,8 @@
+com\ecommerce\config\CorsConfig$1.class
+com\ecommerce\config\DbTestRunner.class
+com\ecommerce\controller\testes\TestController.class
+com\ecommerce\model\Usuario.class
+com\ecommerce\Application.class
+com\ecommerce\config\CorsConfig.class
+com\ecommerce\repository\UsuarioRepository.class
+com\ecommerce\controller\usuarios\UsuarioController.class
