@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.ecommerce.repository.UsuarioRepository;
 
 @RestController
-@RequestMapping("/api/test")
+@RequestMapping("/api/testdb")
+
 public class TestController {
 
     @Autowired

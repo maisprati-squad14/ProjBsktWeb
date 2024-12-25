@@ -1,5 +1,5 @@
 import React from 'react';
-import LoginPage from './pages/LoginPage';  //caminho da url, ou seja, apos npm start, a pagina ira carregar
+import LoginPage from './pages/LoginPage';
 // e com isso, utilize
 
 function App() {
