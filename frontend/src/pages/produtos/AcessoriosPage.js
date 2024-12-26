@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import '../../styles/AcessoriosPage.css';
 import { listarAcessorios } from '../../services/api';
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
 function AcessoriosPage() {
   const [acessorios, setAcessorios] = useState([]);
@@ -60,7 +61,7 @@ function AcessoriosPage() {
     <h1 className="titulo-ofertas"> OFERTAS </h1>
 
       <button className="carousel-button left" onClick={handleScrollLeft}>
-        &lt;
+        <FaArrowLeft className="text-lg" />
       </button>
 
       <ul
@@ -87,7 +88,7 @@ function AcessoriosPage() {
       </ul>
 
         <button className="carousel-button right" onClick={handleScrollRight}>
-          &gt;
+          <FaArrowRight className="text-lg" />
         </button>
     </div>
   );
