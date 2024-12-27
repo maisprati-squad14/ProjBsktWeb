@@ -3,6 +3,7 @@ import Header from './componentes/Header';
 import Navbar from './componentes/Navbar';
 import Carousel from './componentes/Carousel';
 import Footer from './componentes/Footer';
+import Banner from './componentes/Banner';
 
 function PaginaInicialOff() {
 
@@ -26,6 +27,7 @@ return (
             </div>
 
         <Carousel />
+        <Banner />
       <Footer />
     </div>
   );
