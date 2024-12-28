@@ -26,14 +26,14 @@ const Header = () => {
         <button className="text-sm bg-nba-blue dark:bg-phoenixsuns-yellow text-white dark:text-nba-blue px-4 py-2 rounded-md shadow-md hover:bg-orange-600 font-bold">
           Entrar
         </button>
-        <FaUser className="text-gray-600 dark:text-gray-300 text-xl cursor-pointer" />
+{/*         <FaUser className="text-gray-600 dark:text-gray-300 text-xl cursor-pointer" /> */}
         <FaShoppingCart className="text-gray-600 dark:text-gray-300 text-xl cursor-pointer" />
-        <button
-          onClick={toggleDarkMode}
-          className="text-gray-600 dark:text-gray-300 text-xl"
-        >
-          {darkMode ? <FaSun /> : <FaMoon />}
-        </button>
+{/*         <button */}
+{/*           onClick={toggleDarkMode} */}
+{/*           className="text-gray-600 dark:text-gray-300 text-xl" */}
+{/*         > */}
+{/*           {darkMode ? <FaSun /> : <FaMoon />} */}
+{/*         </button> */}
       </div>
     </header>
   );
