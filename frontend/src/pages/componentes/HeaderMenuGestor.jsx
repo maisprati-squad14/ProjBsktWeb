@@ -19,4 +19,4 @@ const HeaderMenuGestor = () => {
   );
 };
 
-export default HeaderMenuLojista;
+export default HeaderMenuGestor;

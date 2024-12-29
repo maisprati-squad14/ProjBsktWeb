@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 const SignUpForm = () => { //estado inicial do formulário
   const [formData, setFormData] = useState({
@@ -8,15 +9,34 @@ const SignUpForm = () => { //estado inicial do formulário
     password: '',
   });
 
-  const handleChange = (e) => {  //Atualiza o estado do componente com base no valor que o user digita nos inputs do form
+  const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Dados do formulário:', formData);
-    // Aqui tem que adicionar a lógica para envio ao backend
+
+        try {
+          const params = new URLSearchParams();
+          params.append('nomeUsuario', formData.fullName);
+          params.append('loginUsuario', formData.login);
+          params.append('senhaUsuario', formData.password);
+          params.append('email', formData.email);
+
+          const response = await axios.post(
+            'http://localhost:8080/api/usuarios/novoregistro',
+            params
+          );
+
+          const tokenAccess = response.data.tokenAccess;
+
+          window.location.href = `/home?tokenAccess=${tokenAccess}`;
+
+        } catch (error) {
+
+          alert('Ocorreu um erro ao criar a conta!');
+        }
   };
 
   return (

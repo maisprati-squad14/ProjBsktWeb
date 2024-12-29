@@ -1,13 +1,43 @@
 import React, { useState } from 'react';
 import { FaGoogle, FaFacebook } from 'react-icons/fa';
 import LoginBackgroundVideo from '../../assets/videos/LoginBackgroundVideo.mp4';
+import axios from 'axios';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
-  const handleLogin = () => {
-    console.log(`E-mail: ${email}, Senha: ${password}`);
+  const handleLogin = async (e) => {
+    e.preventDefault();
+
+    if (!email || !password) {
+      setErrorMessage('Por favor, preencha todos os campos.');
+      return;
+    }
+
+    try {
+      const params = new URLSearchParams();
+      params.append('email', email);
+      params.append('senhaUsuario', password);
+
+      const response = await axios.post(
+        'http://localhost:8080/api/usuarios/acessologin',
+        params
+      );
+
+      const tokenAccess = response.data.tokenAccess;
+      const tipoGestor = response.data.tipoGestor;
+
+      if (tipoGestor === 0) {
+        window.location.href = `/home?tokenAccess=${tokenAccess}`;
+      } else {
+        window.location.href = `/inicio?tokenAccess=${tokenAccess}&tipoGestor=${tipoGestor}`;
+      }
+    } catch (error) {
+      console.error('Erro no login:', error);
+      setErrorMessage('Email ou Senha inválido!');
+    }
   };
 
   return (

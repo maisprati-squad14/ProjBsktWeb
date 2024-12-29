@@ -1,47 +1,15 @@
 import React, { useState } from 'react';
-import { autenticarUsuario } from '../services/api';
+import LoginPg from '../componentes/Login';
+
 
 function LoginPage() {
-  const [loginUsuario, setLoginUsuario] = useState('');
-  const [senhaUsuario, setSenhaUsuario] = useState('');
-  const [tokenAccess, setTokenAccess] = useState('');
-  const [resultado, setResultado] = useState(null);
 
-  const handleLogin = async () => {
-    const data = await autenticarUsuario(loginUsuario, senhaUsuario, tokenAccess);
-    setResultado(data);
-  };
-
-  return (
+return (
     <div>
-      <h1>Login</h1>
-      <input
-        type="text"
-        placeholder="Login Usuario"
-        value={loginUsuario}
-        onChange={e => setLoginUsuario(e.target.value)}
-      />
-      <input
-        type="password"
-        placeholder="Senha Usuario"
-        value={senhaUsuario}
-        onChange={e => setSenhaUsuario(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="Token Access"
-        value={tokenAccess}
-        onChange={e => setTokenAccess(e.target.value)}
-      />
-      <button onClick={handleLogin}>Autenticar</button>
-
-      {resultado && (
-        <div>
-          <pre>{JSON.stringify(resultado, null, 2)}</pre>
-        </div>
-      )}
+      <LoginPg />
     </div>
   );
-}
+
+  }
 
 export default LoginPage;
