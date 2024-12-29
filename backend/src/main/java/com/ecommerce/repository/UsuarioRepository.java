@@ -1,13 +1,13 @@
 package com.ecommerce.repository;
 
-import com.ecommerce.model.sistema.Usuario;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-
-@Repository
-public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
-    // Optional<Usuario> findByTokenAccess(String tokenAccess);
-}
+//import com.ecommerce.model.sistema.Usuario;
+//import org.springframework.data.jpa.repository.JpaRepository;
+//import org.springframework.stereotype.Repository;
+//
+//@Repository
+//public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
+//    // Optional<Usuario> findByTokenAccess(String tokenAccess);
+//}
 
 //@Repository
 //public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
