@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import CardProduto from "./CardProduto"; // Ajuste o caminho conforme necessário
+import CardProduto from "./CardProduto";
+import Modal from "./Modal";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const SecaoOfertas = () => {
@@ -15,6 +16,19 @@ const SecaoOfertas = () => {
 
   // Estado para controlar o índice de início dos produtos visíveis
   const [indiceInicio, setIndiceInicio] = useState(0);
+
+  // Estado para controlar o modal
+  const [produtoSelecionado, setProdutoSelecionado] = useState(null);
+
+  // Função para abrir o modal
+  const abrirModal = (produto) => {
+    setProdutoSelecionado(produto);
+  };
+
+  // Função para fechar o modal
+  const fecharModal = () => {
+    setProdutoSelecionado(null);
+  };
 
   // Função para mover os produtos para a esquerda
   const moverEsquerda = () => {
@@ -48,6 +62,7 @@ const SecaoOfertas = () => {
               nome={produto.nome}
               preco={produto.preco}
               avaliacaoMedia={produto.avaliacaoMedia}
+              onCardClick={() => abrirModal(produto)} // Passa a função para abrir o modal
             />
           ))}
         </div>
@@ -70,6 +85,11 @@ const SecaoOfertas = () => {
           </button>
         </div>
       </div>
+
+      {/* Modal */}
+      {produtoSelecionado && (
+        <Modal produto={produtoSelecionado} fecharModal={fecharModal} />
+      )}
     </div>
   );
 };
