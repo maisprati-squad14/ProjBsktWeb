@@ -1,8 +1,10 @@
 com\ecommerce\dto\sistema\UsuarioRegistroDTO.class
 com\ecommerce\Application.class
 com\ecommerce\repository\sistema\RegistroUsuarioRepository.class
+com\ecommerce\dto\produtos\ProdutosOfertasDTO.class
 com\ecommerce\controller\sistema\LoginUsuarioController.class
 com\ecommerce\config\CorsConfig$1.class
+com\ecommerce\controller\produtos\ProdutosOfertasController.class
 com\ecommerce\controller\testes\TestController.class
 com\ecommerce\repository\sistema\LoginUsuarioRepository.class
 com\ecommerce\controller\produtos\ProdutoAcessorioController.class
@@ -11,3 +13,4 @@ com\ecommerce\dto\sistema\LoginUsuarioDTO.class
 com\ecommerce\config\CorsConfig.class
 com\ecommerce\repository\produtos\ProdutoAcessorioRepository.class
 com\ecommerce\controller\sistema\RegistroUsuarioController.class
+com\ecommerce\repository\produtos\ProdutosOfertasRepository.class
