@@ -5,6 +5,7 @@ import Carousel from '../componentes/Carousel';
 import Footer from '../componentes/Footer';
 import Banner from '../componentes/Banner';
 import SignUpForm from '../componentes/SignUpForm';
+import SecaoOfertas from '../componentes/SecaoOfertas'
 import { useLocation } from 'react-router-dom';
 
 
@@ -19,20 +20,24 @@ return (
       <Navbar />
       <Carousel />
 
-            <div>
-              <iframe
-                title="AcessoriosPage"
-                src="/acessorios"
-                style={{
-                  width: '100%',
-                  height: '350px',
-                  border: 'none',
-                  backgroundColor: 'rgb(29 17 96 / 1)'
-                }}
-              />
-            </div>
+       <SecaoOfertas />
 
         <Carousel />
+
+                    <div>
+                      <iframe
+                        title="AcessoriosPage"
+                        src="/acessorios"
+                        style={{
+                          width: '100%',
+                          height: '320px',
+                          border: 'none',
+                          backgroundColor: '#e5e7eb'
+        //                  backgroundColor: 'rgb(29 17 96 / 1)'
+                        }}
+                      />
+                    </div>
+
         <Banner />
       <Footer />
     </div>
