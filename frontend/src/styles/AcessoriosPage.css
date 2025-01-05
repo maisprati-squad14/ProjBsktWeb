@@ -1,12 +1,12 @@
 .acessorios-carousel {
   position: relative;
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
   padding: 20px 0;
   overflow: hidden;
   background: #fff;
   border-radius: 8px;
-  background-color: rgb(29 17 96 / var(--tw-bg-opacity, 1));
+  background-color: '#e5e7eb';
 }
 
 .acessorios-carousel h2 {
@@ -36,11 +36,11 @@
 }
 
 .carousel-button.left {
-  left: 10px;
+  left: 8px;
 }
 
 .carousel-button.right {
-  right: 10px;
+  right: 8px;
 }
 
 .acessorios-list {

@@ -58,7 +58,6 @@ function AcessoriosPage() {
 
   return (
     <div className="acessorios-carousel">
-    <h1 className="titulo-ofertas"> OFERTAS </h1>
 
       <button className="carousel-button left" onClick={handleScrollLeft}>
         <FaArrowLeft className="text-lg" />
