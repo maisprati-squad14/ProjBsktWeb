@@ -7,16 +7,17 @@ import Banner from './componentes/Banner';
 import SignUpForm from './componentes/SignUpForm';
 import CardProduto from './componentes/CardProduto';
 import SecaoOfertas from './componentes/SecaoOfertas'
+import ProductPage from './componentes/ProductPage'
 
 
 function PaginaInicialOff() {
   // Dados fictícios para teste do CardProduto
-//  const produtoFicticio = {
-//    imagem: "https://via.placeholder.com/350",
-//    nome: "Boné de Basquete NBA",
-//    preco: "299.90",
-//    avaliacaoMedia: 4.5, // Nota média de avaliação
-//  };
+  const produtoFicticio = {
+    imagem: "https://via.placeholder.com/350",
+    nome: "Boné de Basquete NBA",
+    preco: 299.90,
+    avaliacaoMedia: 4.5, // Nota média de avaliação
+  };
 
 return (
     <div>
@@ -42,7 +43,7 @@ return (
 
         <Banner />
         <SignUpForm />
-
+        <ProductPage produto={produtoFicticio} />
 
 
       <Footer />
