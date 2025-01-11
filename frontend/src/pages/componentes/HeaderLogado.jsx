@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaMoon, FaSun, FaSearch, FaUser, FaShoppingCart } from "react-icons/fa";
 import logo from "../../assets/imgs/inicio/logo.png";
 import SearchBar from "./SearchBar";
+import ProfileMenu from "./ProfileMenu";
 
 const Header = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -21,8 +22,9 @@ const Header = () => {
       {/* Barra de Pesquisa */}
         <SearchBar />
 
-      <div className="flex items-center space-x-4">
-        <FaUser className="text-gray-600 dark:text-gray-300 text-xl cursor-pointer" />
+      <div id="button-container" className="flex items-center space-x-4">
+        {/* Menu do Usuário (editar perfil, sair) */}
+        <ProfileMenu />
         <FaShoppingCart className="text-gray-600 dark:text-gray-300 text-xl cursor-pointer" />
         <button
           onClick={toggleDarkMode}
